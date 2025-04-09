@@ -2,12 +2,21 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const menuList = ['Women', 'Men', 'Baby', 'Kids', 'Home'];
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/login');
+  };
+  const goToMain = () => {
+    navigate('/');
+  };
+
   return (
-    <div className='nev-wrap'>
-      <div className="login-wrap">
+    <div className="nev-wrap">
+      <div className="login-wrap" onClick={goToLogin}>
         <FontAwesomeIcon icon={faUser} />
         <div>로그인</div>
       </div>
@@ -16,6 +25,7 @@ const Navbar = () => {
           width={100}
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1200px-H%26M-Logo.svg.png"
           alt="logo"
+          onClick={goToMain} className='logo'
         />
       </div>
       <div className="nev-section">

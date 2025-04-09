@@ -3,11 +3,15 @@
   justify-content: flex-end;
   margin-right: 30px;
   margin-top: 35px;
+  cursor: pointer;
 }
 
 .logo-wrap {
   display: flex;
   justify-content: center;
+}
+.logo-wrap .logo {
+  cursor: pointer;
 }
 
 .nev-section {
@@ -33,6 +37,10 @@
   font-weight: 600;
 }
 
+.menu-list li {
+  cursor: pointer;
+}
+
 .right-section {
   display: flex;
   align-items: center;
@@ -56,4 +64,31 @@
 
 .nev-wrap {
   margin-bottom: 50px;
+}
+
+.product-card {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  height: 100%;
+}
+
+.product-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-wrap {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.card-wrap:hover {
+  transform: scale(1.1);
+}
+
+.col-lg-3 {
+  padding-bottom: 30px;
 }
