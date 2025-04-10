@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   const getProductDetail = async (id) => {
-    const url = `http://localhost:5000/products/${id}`;
+    const url = `https://my-json-server.typicode.com/youxx329/hnm-react-router/products/${id}`;
     const response = await fetch(url);
     const data = await response.json();
     setProduct(data);
@@ -19,7 +19,7 @@ const ProductDetail = () => {
   }, [id]);
 
   return (
-    <Container className='detail-wrap'>
+    <Container className="detail-wrap">
       <Row>
         <Col>
           <img src={product?.img} alt="" />
@@ -31,7 +31,9 @@ const ProductDetail = () => {
             {product?.choice === true ? 'Conscious choice' : ''}
           </div>
           <div>{product?.size && <ProductSize sizes={product.size} />}</div>
-          <div className='item-btn'><button>장바구니</button></div>
+          <div className="item-btn">
+            <button>장바구니</button>
+          </div>
         </Col>
       </Row>
     </Container>

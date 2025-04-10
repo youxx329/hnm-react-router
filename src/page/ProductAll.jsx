@@ -10,7 +10,7 @@ const ProductAll = () => {
     let searchQuery = query.get('q') || '';
     // console.log('쿼리값은?', searchQuery);
 
-    let url = `http://localhost:5000/products?q=${searchQuery}`;
+    let url = `https://my-json-server.typicode.com/youxx329/hnm-react-router/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
