@@ -5,13 +5,14 @@ import { useNavigate } from 'react-router-dom';
 function Login({ setAuthenticate }) {
   const navigate = useNavigate();
   const loginUser = (event) => {
-    console.log('login user function issue');
+    // console.log('login user function issue');
     event.preventDefault();
     setAuthenticate(true);
     navigate('/');
+
   };
   return (
-    <Container>
+    <Container className='con-login'>
       <Form onSubmit={(event) => loginUser(event)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

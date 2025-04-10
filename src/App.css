@@ -17,7 +17,7 @@
 .nev-section {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   margin-top: 40px;
 }
 
@@ -91,4 +91,130 @@
 
 .col-lg-3 {
   padding-bottom: 30px;
+}
+
+.item-tit {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+.item-price {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.item-choice {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.item-btn {
+  width: 100%;
+  padding: 6px;
+  background: #000;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.item-btn button {
+  width: 100%;
+  outline: none;
+  background: #000;
+  border: none;
+  color: #eee;
+  font-weight: bold;
+}
+
+.con-login {
+  max-width: 500px !important;
+}
+
+.mo-bar {
+  display: none;
+}
+
+.login-box {
+  display: flex;
+  align-items: center;
+}
+.login-ico {
+  padding-left: 5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+@media (max-width: 830px) {
+  .nev-section {
+    display: none;
+    padding: 12px;
+  }
+
+  .login-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+  }
+  .mo-bar {
+    display: inline-block;
+  }
+  .nev-wrap {
+    padding: 0 12px 0 12px;
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    transition: left 0.3s ease;
+    z-index: 999;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background: #f1d8d8;
+  }
+
+  .side-menu ul li {
+    list-style-type: none;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .side-menu.open {
+    left: 0;
+  }
+
+  .close-btn {
+    padding: 10px;
+    text-align: right;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .detail-wrap img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    /* display: block; */
+  }
+  .detail-wrap .row {
+    flex-direction: column;
+  }
+  .detail-wrap .col {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .detail-wrap .btn-group {
+    width: 100%;
+  }
+  .item-price {
+    font-size: 22px;
+  }
 }
